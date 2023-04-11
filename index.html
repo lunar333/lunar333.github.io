@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8">
 <title>FINE-GRAINED STYLE CONTROL IN VITS-BASED TEXT-TO-SPEECH SYNTHESIS ｜ FG-VITS </title>
-
+    <h4 id="different-style-and-speaker-reference-speech">Different emotion and reference audio with text synthesis </h4>
   </head>
   <body>
 <table>
   <thead>
     <tr>
       <th>reference speech</th>
-      <th>Generated Speech</th>
+      <th>FG-TRANSFORMER</th>
+      <th>FG-VITS</th>
       <th>Text</th>
     </tr>
   </thead>
@@ -18,138 +19,44 @@
     <tr>
       <td><audio src="samples/LJSpeech/1_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
       <td><audio src="samples/LJSpeech/1_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/1_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
       <td><embed src="samples/LJSpeech/1.txt" width="400" height="80" /></td>
     </tr>
     <tr>
       <td><audio src="samples/LJSpeech/2_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
       <td><audio src="samples/LJSpeech/2_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/1_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
       <td><embed src="samples/LJSpeech/2.txt" width="400" height="80" /></td>
     </tr>
     <tr>
       <td><audio src="samples/LJSpeech/3_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
       <td><audio src="samples/LJSpeech/3_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/1_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
       <td><embed src="samples/LJSpeech/3.txt" width="400" height="80" /></td>
     </tr>
     <tr>
       <td><audio src="samples/LJSpeech/4_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
       <td><audio src="samples/LJSpeech/4_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/1_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
       <td><embed src="samples/LJSpeech/4.txt" width="400" height="80" /></td>
     </tr>
     <tr>
       <td><audio src="samples/LJSpeech/5_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
       <td><audio src="samples/LJSpeech/5_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/1_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
       <td><embed src="samples/LJSpeech/5.txt" width="400" height="80" /></td>
     </tr>
     <tr>
       <td><audio src="samples/LJSpeech/6_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
       <td><audio src="samples/LJSpeech/6_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/1_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
       <td><embed src="samples/LJSpeech/6.txt" width="400" height="80" /></td>
     </tr>
     <tr>
       <td><audio src="samples/LJSpeech/7_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
       <td><audio src="samples/LJSpeech/7_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/1_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
       <td><embed src="samples/LJSpeech/7.txt" width="400" height="80" /></td>
-    </tr>
-    <tr>
-      <td><audio src="samples/LJSpeech/8_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/LJSpeech/8_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><embed src="samples/LJSpeech/8.txt" width="400" height="80" /></td>
-    </tr>
-    <tr>
-      <td><audio src="samples/LJSpeech/9_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/LJSpeech/9_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><embed src="samples/LJSpeech/9.txt" width="400" height="80" /></td>
-    </tr>
-    <tr>
-      <td><audio src="samples/LJSpeech/10_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/LJSpeech/10_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><embed src="samples/LJSpeech/10.txt" width="400" height="80" /></td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="vctk-multiple-speakers-samples-from-speakers-held-out-in-the-test-set">VCTK (multiple speakers, samples from speakers held-out in the test set)</h3>
-
-<h4 id="same-style-and-speaker-reference-speech">Same style and speaker reference speech</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th>Style reference speech</th>
-      <th>Generated Speech</th>
-      <th>Text</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><audio src="samples/VCTK_align/1_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_align/1_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><embed src="samples/VCTK_align/1.txt" width="400" height="80" /></td>
-    </tr>
-    <tr>
-      <td><audio src="samples/VCTK_align/2_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_align/2_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><embed src="samples/VCTK_align/2.txt" width="400" height="80" /></td>
-    </tr>
-    <tr>
-      <td><audio src="samples/VCTK_align/3_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_align/3_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><embed src="samples/VCTK_align/3.txt" width="400" height="80" /></td>
-    </tr>
-    <tr>
-      <td><audio src="samples/VCTK_align/4_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_align/4_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><embed src="samples/VCTK_align/4.txt" width="400" height="80" /></td>
-    </tr>
-    <tr>
-      <td><audio src="samples/VCTK_align/5_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_align/5_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><embed src="samples/VCTK_align/5.txt" width="400" height="80" /></td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="different-style-and-speaker-reference-speech">Different style and speaker reference speech</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th>Speaker reference speech</th>
-      <th>Style reference speech</th>
-      <th>Generated Speech</th>
-      <th>Text</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><audio src="samples/VCTK_diff/1_ref_global.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_diff/1_ref_local.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_diff/1_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><embed src="samples/VCTK_diff/1.txt" width="400" height="80" /></td>
-    </tr>
-    <tr>
-      <td><audio src="samples/VCTK_diff/2_ref_global.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_diff/2_ref_local.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_diff/2_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><embed src="samples/VCTK_diff/2.txt" width="400" height="80" /></td>
-    </tr>
-    <tr>
-      <td><audio src="samples/VCTK_diff/3_ref_global.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_diff/3_ref_local.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_diff/3_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><embed src="samples/VCTK_diff/3.txt" width="400" height="80" /></td>
-    </tr>
-    <tr>
-      <td><audio src="samples/VCTK_diff/4_ref_global.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_diff/4_ref_local.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_diff/4_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><embed src="samples/VCTK_diff/4.txt" width="400" height="80" /></td>
-    </tr>
-    <tr>
-      <td><audio src="samples/VCTK_diff/5_ref_global.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_diff/5_ref_local.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><audio src="samples/VCTK_diff/5_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
-      <td><embed src="samples/VCTK_diff/5.txt" width="400" height="80" /></td>
     </tr>
   </tbody>
 </table>
