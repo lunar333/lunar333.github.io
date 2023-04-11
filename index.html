@@ -1,19 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en-US">
+  <head>
     <meta charset="UTF-8">
-    <title>FG-VITS</title>
-    <script type="text/javascript" src="js/vue.js"></script>
-</head>
-<body>
-    <!--准备好一个容器-->
-    <div id="root">
-        <h1>Hello, {{name}}</h1>
-            <audio controls>
-              <source src="angry.wav" type="audio/mpeg">
-              Your browser does not support the audio element.
-            </audio>
-    </div>
 
-</body>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Fine-grained style control in Transformer-based Text-to-speech Synthesis | FG-transformer-TTS</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Fine-grained style control in Transformer-based Text-to-speech Synthesis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Official implementation for the paper Fine-grained style control in transformer-based text-to-speech synthesis." />
+<meta property="og:description" content="Official implementation for the paper Fine-grained style control in transformer-based text-to-speech synthesis." />
+<link rel="canonical" href="https://b04901014.github.io/FG-transformer-TTS/" />
+<meta property="og:url" content="https://b04901014.github.io/FG-transformer-TTS/" />
+<meta property="og:site_name" content="FG-transformer-TTS" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Fine-grained style control in Transformer-based Text-to-speech Synthesis" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Official implementation for the paper Fine-grained style control in transformer-based text-to-speech synthesis.","headline":"Fine-grained style control in Transformer-based Text-to-speech Synthesis","name":"FG-transformer-TTS","url":"https://b04901014.github.io/FG-transformer-TTS/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/FG-transformer-TTS/assets/css/style.css?v=d0362cc8530ebe0744ad3104bf1da8145f5b1aec">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/FG-transformer-TTS/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Fine-grained style control in Transformer-based Text-to-speech Synthesis</h1>
+      <h2 class="project-tagline">Official implementation for the paper Fine-grained style control in transformer-based text-to-speech synthesis. </h2>
+      
+        <a href="https://github.com/b04901014/FG-transformer-TTS" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h2 id="fine-grained-style-control-in-transformer-based-text-to-speech-synthesis">Fine-grained style control in Transformer-based Text-to-speech Synthesis</h2>
+
+<ul>
+  <li>In this paper, we present a novel architecture to realize fine-grained style control on the transformer-based text-to-speech synthesis (TransformerTTS). Specifically, we model the speaking style by extracting a time sequence of local style tokens (LST) from the reference speech. The existing content encoder in TransformerTTS is then replaced by our designed cross-attention blocks for fusion and alignment between content and style. As the fusion is performed along with the skip connection, our cross-attention block provides a good inductive bias to gradually infuse the phoneme representation with a given style. Additionally, we prevent the style embedding from encoding linguistic content by randomly truncating LST during training and using wav2vec 2.0 features. Experiments show that with fine-grained style control, our system performs better in terms of naturalness, intelligibility, and style transferability. Our code and samples are publicly available.</li>
+  <li>Submitted to ICASSP 2022</li>
+  <li><a href="https://github.com/b04901014/FG-transformer-TTS">Code</a></li>
+  <li><a href="http://arxiv.org/abs/2110.06306">Paper</a></li>
+</ul>
+
+<h3 id="lj-speech-samples-single-speaker">LJ Speech samples (single speaker)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Style reference speech</th>
+      <th>Generated Speech</th>
+      <th>Text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><audio src="samples/LJSpeech/1_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/1_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/LJSpeech/1.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/LJSpeech/2_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/2_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/LJSpeech/2.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/LJSpeech/3_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/3_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/LJSpeech/3.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/LJSpeech/4_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/4_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/LJSpeech/4.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/LJSpeech/5_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/5_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/LJSpeech/5.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/LJSpeech/6_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/6_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/LJSpeech/6.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/LJSpeech/7_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/7_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/LJSpeech/7.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/LJSpeech/8_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/8_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/LJSpeech/8.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/LJSpeech/9_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/9_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/LJSpeech/9.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/LJSpeech/10_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/LJSpeech/10_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/LJSpeech/10.txt" width="400" height="80" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="vctk-multiple-speakers-samples-from-speakers-held-out-in-the-test-set">VCTK (multiple speakers, samples from speakers held-out in the test set)</h3>
+
+<h4 id="same-style-and-speaker-reference-speech">Same style and speaker reference speech</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Style reference speech</th>
+      <th>Generated Speech</th>
+      <th>Text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><audio src="samples/VCTK_align/1_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_align/1_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/VCTK_align/1.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/VCTK_align/2_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_align/2_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/VCTK_align/2.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/VCTK_align/3_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_align/3_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/VCTK_align/3.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/VCTK_align/4_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_align/4_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/VCTK_align/4.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/VCTK_align/5_ref.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_align/5_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/VCTK_align/5.txt" width="400" height="80" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="different-style-and-speaker-reference-speech">Different style and speaker reference speech</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Speaker reference speech</th>
+      <th>Style reference speech</th>
+      <th>Generated Speech</th>
+      <th>Text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><audio src="samples/VCTK_diff/1_ref_global.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_diff/1_ref_local.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_diff/1_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/VCTK_diff/1.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/VCTK_diff/2_ref_global.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_diff/2_ref_local.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_diff/2_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/VCTK_diff/2.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/VCTK_diff/3_ref_global.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_diff/3_ref_local.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_diff/3_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/VCTK_diff/3.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/VCTK_diff/4_ref_global.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_diff/4_ref_local.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_diff/4_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/VCTK_diff/4.txt" width="400" height="80" /></td>
+    </tr>
+    <tr>
+      <td><audio src="samples/VCTK_diff/5_ref_global.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_diff/5_ref_local.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><audio src="samples/VCTK_diff/5_syn.wav" type="audio/wav" controls="" preload=""></audio></td>
+      <td><embed src="samples/VCTK_diff/5.txt" width="400" height="80" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="observations">Observations</h3>
+<ul>
+  <li>Still are some minor deletion or repetition TTS errors</li>
+  <li>Samples for male speakers in VCTK are significantly lower in quality due to the use of LJ Speech as pre-training data</li>
+  <li>Distortion occurs often during high loudness, pitch transitions.</li>
+</ul>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/b04901014/FG-transformer-TTS">FG-transformer-TTS</a> is maintained by <a href="https://github.com/b04901014">b04901014</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
 </html>
